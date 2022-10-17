@@ -67,7 +67,9 @@ function App() {
       <input onChange={(e)=>{
         입력값변경(e.target.value)}} type="text"></input>
       <button onClick={()=>{
-        글제목.push(입력값);
+        let copy = [...글제목];
+        copy.unshift(입력값);
+        글제목변경(copy);
         따봉.push(0);
         modal.push(0);
       }}>버튼</button>
